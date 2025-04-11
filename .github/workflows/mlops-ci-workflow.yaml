@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: initcron/fastapi:${{ github.sha }}
+          tags: initcron/fastapi:${{ github.sha | slice(0, 7) }}
           context: "."
           file: "Dockerfile"
 
